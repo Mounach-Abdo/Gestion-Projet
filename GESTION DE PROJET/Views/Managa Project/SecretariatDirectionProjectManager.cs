@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GESTION_DE_PROJET.Shared;
 using GESTION_DE_PROJET.Shared.Recherche;
+using GESTION_DE_PROJET.Views.Managa_Project.Forms;
 
 namespace GESTION_DE_PROJET
 {
@@ -60,35 +61,41 @@ namespace GESTION_DE_PROJET
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
-            var sql =
-                "SELECT Code , nom, description, o.Nom,dateDebut,dateFin from Projet p inner join Organisme o on o.Code==p.clientOrganismeID   ";
-
-            Search search = new Search() {sql = sql};
-            search.checkCode.Tag = "p.Code";
-            search.lblCode.Text = " Code du projet : ";
-            search.CheckNom.Tag = " p.Nom";
-            search.lblNom.Text = "Nom du Projet";
-            search.CheckOrganisme.Tag = "o.Code";
-            search.nomOrganisme.Text = "Organisme Client : ";
-
-            search.title = "Rechercher Un Projet";
-
-            search.orderBy = " order By DateDebut,DateFin";
-
-            search.ShowDialog();
-
-            search.gridResults.CellDoubleClick += (se, ev) =>
+            try
             {
-                if (ev.RowIndex != 0 && ev.ColumnIndex != 0)
+                var sql =
+                    "SELECT Code , nom, description, o.Nom,dateDebut,dateFin from Projet p inner join Organisme o on o.Code==p.clientOrganismeID   ";
+
+                Search search = new Search() { sql = sql };
+                search.checkCode.Tag = "p.Code";
+                search.lblCode.Text = " Code du projet : ";
+                search.CheckNom.Tag = " p.Nom";
+                search.lblNom.Text = "Nom du Projet";
+                search.CheckOrganisme.Tag = "o.Code";
+                search.nomOrganisme.Text = "Organisme Client : ";
+
+                search.title = "Rechercher Un Projet";
+
+                search.orderBy = " order By DateDebut,DateFin";
+
+                search.ShowDialog();
+
+                search.gridResults.CellDoubleClick += (se, ev) =>
                 {
-                    var code = search.gridResults.Rows[ev.RowIndex].Cells[0].Value + "";
-                    rechercherProject(code);
-                    search.Close();
-                }
-            };
+                    if ( ev.RowIndex != 0 && ev.ColumnIndex != 0 )
+                    {
+                        var code = search.gridResults.Rows[ev.RowIndex].Cells[0].Value + "";
+                        rechercherProject(code);
+                        search.Close();
+                    }
+                };
 
-            search.Close();
+                search.Close();
+            }
+            catch (Exception ex)
+            {
 
+            }
         }
 
         private void rechercherProject(string code = "")
@@ -100,7 +107,7 @@ namespace GESTION_DE_PROJET
 
                 if ( !string.IsNullOrEmpty(code) )
                     sql += " WHERE p.code='" + code + "'";
-                var data = Connection.GetdDataFromDatabase(sql);
+                var data = Database.GetdDataFromDatabase(sql);
                 gridProject.DataSource = data;
             }
             catch (Exception ex)
@@ -108,6 +115,38 @@ namespace GESTION_DE_PROJET
                 MessageBox.Show("un erreur s'est produit.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
           
+        }
+
+        private void gridProject_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+           
+        }
+
+        private void gridProject_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
+        {
+            
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            frmAddEditProjet frm = new frmAddEditProjet() {status = "add"};
+            frm.ShowDialog();
+            rechercherProject();
+        }
+
+        private void gridProject_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if ( e.RowIndex != -1)
+            {
+                frmAddEditProjet frm = new frmAddEditProjet() { status = "add",code =gridProject.Rows[e.RowIndex].Cells[0].Value+""};
+                frm.ShowDialog();
+                rechercherProject();
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

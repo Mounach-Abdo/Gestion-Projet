@@ -88,7 +88,7 @@ namespace GESTION_DE_PROJET
             var roleInputed = login.Text.Substring(login.Text.IndexOf("@"), login.Text.LastIndexOf(".") - login.Text.IndexOf("@"));
 
             var sql = "Select nomrole roleEmployes where nomrole like '" + roleInputed + "'";
-            var result = Connection.GetOneRow(sql);
+            var result = Database.GetOneRow(sql);
             if(result == "")
             {
                 MessageBox.Show("Le nom de domaine est invalide(Role) ", "erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error
@@ -107,7 +107,7 @@ namespace GESTION_DE_PROJET
             }
 
              sql = "Select * from utilisateur where Mail='" + login.Text + "' and password='" + password.Text + "'";
-            var user = Connection.GetdDataFromDatabase(sql);
+            var user = Database.GetdDataFromDatabase(sql);
 
             if (user != null && user.Rows.Count > 0)
             {

@@ -167,7 +167,7 @@
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="Shared\App.cs" />
-    <Compile Include="Shared\Connection.cs" />
+    <Compile Include="Shared\Database.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

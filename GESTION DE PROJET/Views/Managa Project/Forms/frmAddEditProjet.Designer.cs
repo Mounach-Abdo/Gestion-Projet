@@ -72,10 +72,10 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
             this.BtnChooseFiles = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.gridFiles = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.btnSave = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnCancel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -94,7 +94,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 304);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 319);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -122,16 +122,16 @@
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 9;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(508, 298);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(508, 313);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // bunifuLabel3
@@ -143,7 +143,7 @@
             this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel3.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel3.Location = new System.Drawing.Point(3, 9);
+            this.bunifuLabel3.Location = new System.Drawing.Point(3, 11);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel3.Size = new System.Drawing.Size(31, 17);
@@ -161,7 +161,7 @@
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel1.Location = new System.Drawing.Point(3, 44);
+            this.bunifuLabel1.Location = new System.Drawing.Point(3, 50);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(86, 17);
@@ -179,7 +179,7 @@
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel2.Location = new System.Drawing.Point(3, 79);
+            this.bunifuLabel2.Location = new System.Drawing.Point(3, 89);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(124, 17);
@@ -197,7 +197,7 @@
             this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel4.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel4.Location = new System.Drawing.Point(3, 115);
+            this.bunifuLabel4.Location = new System.Drawing.Point(3, 128);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(66, 17);
@@ -215,7 +215,7 @@
             this.bunifuLabel5.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel5.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel5.Location = new System.Drawing.Point(3, 153);
+            this.bunifuLabel5.Location = new System.Drawing.Point(3, 167);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel5.Size = new System.Drawing.Size(47, 17);
@@ -233,7 +233,7 @@
             this.bunifuLabel6.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel6.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel6.Location = new System.Drawing.Point(3, 192);
+            this.bunifuLabel6.Location = new System.Drawing.Point(3, 206);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel6.Size = new System.Drawing.Size(147, 17);
@@ -251,7 +251,7 @@
             this.bunifuLabel7.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel7.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel7.Location = new System.Drawing.Point(3, 230);
+            this.bunifuLabel7.Location = new System.Drawing.Point(3, 245);
             this.bunifuLabel7.Name = "bunifuLabel7";
             this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel7.Size = new System.Drawing.Size(84, 17);
@@ -327,7 +327,7 @@
             this.textCode.SelectionLength = 0;
             this.textCode.SelectionStart = 0;
             this.textCode.ShortcutsEnabled = true;
-            this.textCode.Size = new System.Drawing.Size(337, 29);
+            this.textCode.Size = new System.Drawing.Size(337, 33);
             this.textCode.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.textCode.TabIndex = 7;
             this.textCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -368,7 +368,7 @@
             this.txtNom.IconRight = null;
             this.txtNom.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNom.Lines = new string[0];
-            this.txtNom.Location = new System.Drawing.Point(168, 38);
+            this.txtNom.Location = new System.Drawing.Point(168, 42);
             this.txtNom.MaxLength = 32767;
             this.txtNom.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNom.Modified = false;
@@ -404,7 +404,7 @@
             this.txtNom.SelectionLength = 0;
             this.txtNom.SelectionStart = 0;
             this.txtNom.ShortcutsEnabled = true;
-            this.txtNom.Size = new System.Drawing.Size(337, 29);
+            this.txtNom.Size = new System.Drawing.Size(337, 33);
             this.txtNom.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtNom.TabIndex = 7;
             this.txtNom.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -445,7 +445,7 @@
             this.txtDesc.IconRight = null;
             this.txtDesc.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDesc.Lines = new string[0];
-            this.txtDesc.Location = new System.Drawing.Point(168, 73);
+            this.txtDesc.Location = new System.Drawing.Point(168, 81);
             this.txtDesc.MaxLength = 32767;
             this.txtDesc.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDesc.Modified = false;
@@ -481,7 +481,7 @@
             this.txtDesc.SelectionLength = 0;
             this.txtDesc.SelectionStart = 0;
             this.txtDesc.ShortcutsEnabled = true;
-            this.txtDesc.Size = new System.Drawing.Size(337, 29);
+            this.txtDesc.Size = new System.Drawing.Size(337, 33);
             this.txtDesc.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtDesc.TabIndex = 7;
             this.txtDesc.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -522,7 +522,7 @@
             this.txtMontant.IconRight = null;
             this.txtMontant.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMontant.Lines = new string[0];
-            this.txtMontant.Location = new System.Drawing.Point(168, 184);
+            this.txtMontant.Location = new System.Drawing.Point(168, 198);
             this.txtMontant.MaxLength = 32767;
             this.txtMontant.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtMontant.Modified = false;
@@ -582,6 +582,7 @@
             this.dateDebut.DisabledColor = System.Drawing.Color.Gray;
             this.dateDebut.DisplayWeekNumbers = false;
             this.dateDebut.DPHeight = 0;
+            this.dateDebut.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dateDebut.FillDatePicker = false;
             this.dateDebut.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateDebut.ForeColor = System.Drawing.Color.White;
@@ -589,8 +590,8 @@
             this.dateDebut.IconColor = System.Drawing.Color.Gray;
             this.dateDebut.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dateDebut.LeftTextMargin = 5;
-            this.dateDebut.Location = new System.Drawing.Point(168, 108);
-            this.dateDebut.MinimumSize = new System.Drawing.Size(0, 32);
+            this.dateDebut.Location = new System.Drawing.Point(168, 120);
+            this.dateDebut.MinimumSize = new System.Drawing.Size(4, 32);
             this.dateDebut.Name = "dateDebut";
             this.dateDebut.Size = new System.Drawing.Size(337, 32);
             this.dateDebut.TabIndex = 8;
@@ -608,6 +609,7 @@
             this.dateFin.DisabledColor = System.Drawing.Color.Gray;
             this.dateFin.DisplayWeekNumbers = false;
             this.dateFin.DPHeight = 0;
+            this.dateFin.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dateFin.FillDatePicker = false;
             this.dateFin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateFin.ForeColor = System.Drawing.Color.White;
@@ -615,8 +617,8 @@
             this.dateFin.IconColor = System.Drawing.Color.Gray;
             this.dateFin.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dateFin.LeftTextMargin = 5;
-            this.dateFin.Location = new System.Drawing.Point(168, 146);
-            this.dateFin.MinimumSize = new System.Drawing.Size(0, 32);
+            this.dateFin.Location = new System.Drawing.Point(168, 159);
+            this.dateFin.MinimumSize = new System.Drawing.Size(4, 32);
             this.dateFin.Name = "dateFin";
             this.dateFin.Size = new System.Drawing.Size(337, 32);
             this.dateFin.TabIndex = 8;
@@ -658,10 +660,11 @@
             this.chefProject.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.chefProject.ItemHighLightForeColor = System.Drawing.Color.White;
             this.chefProject.ItemTopMargin = 3;
-            this.chefProject.Location = new System.Drawing.Point(168, 223);
+            this.chefProject.Location = new System.Drawing.Point(168, 237);
             this.chefProject.Name = "chefProject";
             this.chefProject.Size = new System.Drawing.Size(337, 32);
             this.chefProject.TabIndex = 9;
+            this.chefProject.Text = null;
             this.chefProject.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.chefProject.TextLeftMargin = 5;
             // 
@@ -674,7 +677,7 @@
             this.bunifuLabel8.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel8.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel8.Location = new System.Drawing.Point(3, 268);
+            this.bunifuLabel8.Location = new System.Drawing.Point(3, 284);
             this.bunifuLabel8.Name = "bunifuLabel8";
             this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel8.Size = new System.Drawing.Size(93, 17);
@@ -720,10 +723,11 @@
             this.OrganismeClient.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.OrganismeClient.ItemHighLightForeColor = System.Drawing.Color.White;
             this.OrganismeClient.ItemTopMargin = 3;
-            this.OrganismeClient.Location = new System.Drawing.Point(168, 260);
+            this.OrganismeClient.Location = new System.Drawing.Point(168, 276);
             this.OrganismeClient.Name = "OrganismeClient";
             this.OrganismeClient.Size = new System.Drawing.Size(337, 32);
             this.OrganismeClient.TabIndex = 9;
+            this.OrganismeClient.Text = null;
             this.OrganismeClient.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.OrganismeClient.TextLeftMargin = 5;
             // 
@@ -741,10 +745,10 @@
             this.tableLayoutPanel3.Location = new System.Drawing.Point(517, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.53226F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.46774F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(280, 298);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.70588F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.29412F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(280, 313);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // bunifuLabel9
@@ -756,7 +760,7 @@
             this.bunifuLabel9.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel9.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel9.Location = new System.Drawing.Point(3, 12);
+            this.bunifuLabel9.Location = new System.Drawing.Point(3, 11);
             this.bunifuLabel9.Name = "bunifuLabel9";
             this.bunifuLabel9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel9.Size = new System.Drawing.Size(141, 17);
@@ -846,21 +850,21 @@
             this.BtnChooseFiles.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.BtnChooseFiles.OnPressedState.IconLeftImage = null;
             this.BtnChooseFiles.OnPressedState.IconRightImage = null;
-            this.BtnChooseFiles.Size = new System.Drawing.Size(125, 35);
+            this.BtnChooseFiles.Size = new System.Drawing.Size(125, 34);
             this.BtnChooseFiles.TabIndex = 2;
             this.BtnChooseFiles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BtnChooseFiles.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.BtnChooseFiles.TextMarginLeft = 0;
             this.BtnChooseFiles.TextPadding = new System.Windows.Forms.Padding(0);
             this.BtnChooseFiles.UseDefaultRadiusAndThickness = true;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.BtnChooseFiles.Click += new System.EventHandler(this.BtnChooseFiles_Click);
             // 
             // gridFiles
             // 
             this.gridFiles.AllowCustomTheming = false;
+            this.gridFiles.AllowUserToAddRows = false;
+            this.gridFiles.AllowUserToResizeColumns = false;
+            this.gridFiles.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.gridFiles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -910,14 +914,17 @@
             this.gridFiles.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.gridFiles.HeaderBgColor = System.Drawing.Color.Empty;
             this.gridFiles.HeaderForeColor = System.Drawing.Color.White;
-            this.gridFiles.Location = new System.Drawing.Point(3, 44);
+            this.gridFiles.Location = new System.Drawing.Point(3, 43);
             this.gridFiles.Name = "gridFiles";
             this.gridFiles.RowHeadersVisible = false;
             this.gridFiles.RowTemplate.Height = 40;
             this.gridFiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridFiles.Size = new System.Drawing.Size(274, 201);
+            this.gridFiles.Size = new System.Drawing.Size(274, 226);
             this.gridFiles.TabIndex = 3;
             this.gridFiles.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.gridFiles.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.gridFiles_RowsRemoved);
+            this.gridFiles.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.gridFiles_UserDeletedRow);
+            this.gridFiles.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.gridFiles_UserDeletingRow);
             // 
             // btnSave
             // 
@@ -966,7 +973,7 @@
             this.btnSave.IdleIconLeftImage = null;
             this.btnSave.IdleIconRightImage = null;
             this.btnSave.IndicateFocus = false;
-            this.btnSave.Location = new System.Drawing.Point(3, 251);
+            this.btnSave.Location = new System.Drawing.Point(3, 275);
             this.btnSave.Name = "btnSave";
             this.btnSave.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSave.OnDisabledState.BorderRadius = 1;
@@ -1056,7 +1063,7 @@
             this.btnCancel.IdleIconLeftImage = null;
             this.btnCancel.IdleIconRightImage = null;
             this.btnCancel.IndicateFocus = false;
-            this.btnCancel.Location = new System.Drawing.Point(152, 251);
+            this.btnCancel.Location = new System.Drawing.Point(152, 275);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCancel.OnDisabledState.BorderRadius = 1;
@@ -1099,12 +1106,17 @@
             this.btnCancel.UseDefaultRadiusAndThickness = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Multiselect = true;
+            // 
             // frmAddEditProjet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(800, 304);
+            this.ClientSize = new System.Drawing.Size(800, 319);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddEditProjet";

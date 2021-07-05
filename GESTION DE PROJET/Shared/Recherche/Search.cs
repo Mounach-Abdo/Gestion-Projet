@@ -38,7 +38,7 @@ namespace GESTION_DE_PROJET.Shared.Recherche
                     where += " AND " + CheckNom.Tag + "='" + textNom.Text + "'";
                 if ( CheckOrganisme.Checked )
                     where += " AND " + CheckOrganisme.Tag + " = '" + textOrganismeID.Text + "'";
-                var data = Connection.GetdDataFromDatabase(sql + where + orderBy);
+                var data = Database.GetdDataFromDatabase(sql + where + orderBy);
 
                 gridResults.DataSource = data;
                 gridResults.Update();

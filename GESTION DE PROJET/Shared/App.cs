@@ -13,13 +13,13 @@ namespace GESTION_DE_PROJET.Shared
         public static string ConnectedUserId;
         public const string SecretariatRole = "secretariat";
         public const string DirectionRole = "direction";
-
+        public const string formatDateSql = "dd/MM/yyyy HH:mm:ss";
 
         public static void FillCombo(ref BunifuDropdown combo, string sql, string valueMember, string displayMember)
         {
             try
             {
-                var data = Connection.GetdDataFromDatabase(sql);
+                var data = Database.GetdDataFromDatabase(sql);
                 combo.ValueMember = valueMember;
                 combo.DisplayMember = displayMember;
                 combo.DataSource = data;
