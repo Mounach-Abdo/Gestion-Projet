@@ -51,7 +51,7 @@ namespace GESTION_DE_PROJET
 
         private void SecretariatDirectionProjectManager_Load(object sender, EventArgs e)
         {
-
+            rechercherProject();
         }
 
         private void bunifuPanel1_Click(object sender, EventArgs e)
@@ -109,6 +109,7 @@ namespace GESTION_DE_PROJET
                     sql += " WHERE p.code='" + code + "'";
                 var data = Database.GetdDataFromDatabase(sql);
                 gridProject.DataSource = data;
+                gridProject.Columns.Insert(0, new DataGridViewCheckBoxColumn() { HeaderText = "Selectionner" }) ;
             }
             catch (Exception ex)
             {
@@ -129,7 +130,7 @@ namespace GESTION_DE_PROJET
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            frmAddEditProjet frm = new frmAddEditProjet() {status = "add"};
+            frmAddEditProjet frm = new frmAddEditProjet("add","") {status = "add"};
             frm.ShowDialog();
             rechercherProject();
         }
@@ -138,7 +139,7 @@ namespace GESTION_DE_PROJET
         {
             if ( e.RowIndex != -1)
             {
-                frmAddEditProjet frm = new frmAddEditProjet() { status = "add",code =gridProject.Rows[e.RowIndex].Cells[0].Value+""};
+                frmAddEditProjet frm = new frmAddEditProjet("edit", gridProject.Rows[e.RowIndex].Cells[0].Value + "");
                 frm.ShowDialog();
                 rechercherProject();
             }
@@ -146,7 +147,48 @@ namespace GESTION_DE_PROJET
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if(ids.Count > 0 )
+            {
+                var sql = "delete from project where code in (0";
+                foreach ( var id in ids )
+                    sql += ",'" + id + "'";
+                sql += ")";
+                Database.UpdateDatabase(sql);
+                ids.Clear();
+            }
+        }
 
+        private void bunifuCheckBox1_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            if ( bunifuCheckBox1.Checked )
+            {
+                ids.Clear();
+
+                foreach ( DataGridViewRow row in gridProject.Rows )
+                {
+                    row.Cells[0].Value = true;
+                    ids.Add(row.Cells[1].Value + "");
+                }
+            }
+            else
+            {
+                ids.Clear();
+
+                foreach ( DataGridViewRow row in gridProject.Rows )
+                {
+                    row.Cells[0].Value = false;
+                }
+            }
+        }
+
+        List<string> ids = new List<string>();
+
+        private void gridProject_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex != -1 && e.ColumnIndex ==0 )
+            {
+                ids.Add(gridProject.Rows[e.RowIndex].Cells[1].Value + "");
+            }
         }
     }
 }

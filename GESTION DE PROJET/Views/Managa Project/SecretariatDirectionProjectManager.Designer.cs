@@ -57,6 +57,7 @@ namespace GESTION_DE_PROJET
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MainPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridProject)).BeginInit();
@@ -311,6 +312,8 @@ namespace GESTION_DE_PROJET
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridProject.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gridProject.ColumnHeadersHeight = 40;
+            this.gridProject.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
             this.tableLayoutPanel1.SetColumnSpan(this.gridProject, 5);
             this.gridProject.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.gridProject.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -352,6 +355,7 @@ namespace GESTION_DE_PROJET
             this.gridProject.Size = new System.Drawing.Size(577, 385);
             this.gridProject.TabIndex = 3;
             this.gridProject.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.gridProject.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProject_CellContentClick);
             this.gridProject.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProject_CellDoubleClick);
             this.gridProject.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.gridProject_UserDeletedRow);
             this.gridProject.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.gridProject_UserDeletingRow);
@@ -419,6 +423,7 @@ namespace GESTION_DE_PROJET
             this.bunifuCheckBox1.TabIndex = 0;
             this.bunifuCheckBox1.ThreeState = false;
             this.bunifuCheckBox1.ToolTipText = null;
+            this.bunifuCheckBox1.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.bunifuCheckBox1_CheckedChanged);
             // 
             // bunifuLabel3
             // 
@@ -719,6 +724,11 @@ namespace GESTION_DE_PROJET
             this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            // 
             // SecretariatDirectionProjectManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -769,5 +779,6 @@ namespace GESTION_DE_PROJET
         private Bunifu.UI.WinForms.BunifuCheckBox bunifuCheckBox1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDelete;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
     }
 }

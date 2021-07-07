@@ -15,9 +15,11 @@ namespace GESTION_DE_PROJET.Views.Managa_Project.Forms
 {
     public partial class frmAddEditProjet : Form
     {
-        public frmAddEditProjet()
+        public frmAddEditProjet(string status,string code)
         {
             InitializeComponent();
+            this.status = status;
+            this.code = code;
         }
 
         public string status;
