@@ -52,6 +52,7 @@ namespace GESTION_DE_PROJET
         private void SecretariatDirectionProjectManager_Load(object sender, EventArgs e)
         {
             rechercherProject();
+            gridProject.Columns.Insert(0, new DataGridViewCheckBoxColumn() { HeaderText = "Selectionner" });
         }
 
         private void bunifuPanel1_Click(object sender, EventArgs e)
@@ -64,14 +65,14 @@ namespace GESTION_DE_PROJET
             try
             {
                 var sql =
-                    "SELECT Code , nom, description, o.Nom,dateDebut,dateFin from Projet p inner join Organisme o on o.Code==p.clientOrganismeID   ";
+                    "SELECT p.Code , p.nom, p.description, o.Nom,dateDebut,dateFin from Projet p inner join Organisme o on o.Code=p.clientOrganismeID   ";
 
                 Search search = new Search() { sql = sql };
                 search.checkCode.Tag = "p.Code";
                 search.lblCode.Text = " Code du projet : ";
                 search.CheckNom.Tag = " p.Nom";
                 search.lblNom.Text = "Nom du Projet";
-                search.CheckOrganisme.Tag = "o.Code";
+                search.CheckOrganisme.Tag = "o.Nom";
                 search.nomOrganisme.Text = "Organisme Client : ";
 
                 search.title = "Rechercher Un Projet";
@@ -98,18 +99,22 @@ namespace GESTION_DE_PROJET
             }
         }
 
+        /// <summary>
+        /// tested
+        /// </summary>
+        /// <param name="code"></param>
         private void rechercherProject(string code = "")
         {
             try
             {
                 var sql =
-                    "SELECT Code , nom, description, o.Nom,dateDebut as 'Date Debut',dateFin as 'Date de fin', Montant, u.Nom as 'Chef De projet',o.Nom as 'organisme Client' from Projet p inner join Organisme o on o.Code==p.clientOrganismeID inner join utilisateur u on p.chefprojet = u.code  ";
+                    "SELECT p.Code , p.nom, p.description, o.Nom,dateDebut as 'Date Debut',dateFin as 'Date de fin', p.Montant, u.Nom as 'Chef De projet',o.Nom as 'organisme Client' from Projet p inner join Organisme o on o.Code=p.clientOrganismeID inner join utilisateur u on p.chefprojet = u.matricule    ";
 
                 if ( !string.IsNullOrEmpty(code) )
                     sql += " WHERE p.code='" + code + "'";
                 var data = Database.GetdDataFromDatabase(sql);
                 gridProject.DataSource = data;
-                gridProject.Columns.Insert(0, new DataGridViewCheckBoxColumn() { HeaderText = "Selectionner" }) ;
+              
             }
             catch (Exception ex)
             {
@@ -139,7 +144,7 @@ namespace GESTION_DE_PROJET
         {
             if ( e.RowIndex != -1)
             {
-                frmAddEditProjet frm = new frmAddEditProjet("edit", gridProject.Rows[e.RowIndex].Cells[0].Value + "");
+                frmAddEditProjet frm = new frmAddEditProjet("edit", gridProject.Rows[e.RowIndex].Cells[1].Value + "");
                 frm.ShowDialog();
                 rechercherProject();
             }

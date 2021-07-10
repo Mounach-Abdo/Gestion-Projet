@@ -46,11 +46,11 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -72,9 +72,9 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
             this.BtnChooseFiles = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.gridFiles = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.btnSave = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnCancel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.gridFiles = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -284,6 +284,7 @@
             this.textCode.DefaultText = "";
             this.textCode.Enabled = false;
             this.textCode.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.textCode.ForeColor = System.Drawing.Color.White;
             this.textCode.HideSelection = true;
             this.textCode.IconLeft = null;
             this.textCode.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -314,7 +315,7 @@
             this.textCode.OnHoverState = stateProperties3;
             stateProperties4.BorderColor = System.Drawing.Color.Silver;
             stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.ForeColor = System.Drawing.Color.White;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.textCode.OnIdleState = stateProperties4;
             this.textCode.Padding = new System.Windows.Forms.Padding(3);
@@ -361,6 +362,7 @@
             this.txtNom.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
             this.txtNom.DefaultText = "";
             this.txtNom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.txtNom.ForeColor = System.Drawing.Color.White;
             this.txtNom.HideSelection = true;
             this.txtNom.IconLeft = null;
             this.txtNom.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -391,7 +393,7 @@
             this.txtNom.OnHoverState = stateProperties7;
             stateProperties8.BorderColor = System.Drawing.Color.Silver;
             stateProperties8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.ForeColor = System.Drawing.Color.White;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtNom.OnIdleState = stateProperties8;
             this.txtNom.Padding = new System.Windows.Forms.Padding(3);
@@ -438,6 +440,7 @@
             this.txtDesc.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
             this.txtDesc.DefaultText = "";
             this.txtDesc.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.txtDesc.ForeColor = System.Drawing.Color.White;
             this.txtDesc.HideSelection = true;
             this.txtDesc.IconLeft = null;
             this.txtDesc.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -468,7 +471,7 @@
             this.txtDesc.OnHoverState = stateProperties11;
             stateProperties12.BorderColor = System.Drawing.Color.Silver;
             stateProperties12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            stateProperties12.ForeColor = System.Drawing.Color.Empty;
+            stateProperties12.ForeColor = System.Drawing.Color.White;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtDesc.OnIdleState = stateProperties12;
             this.txtDesc.Padding = new System.Windows.Forms.Padding(3);
@@ -515,6 +518,7 @@
             this.txtMontant.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
             this.txtMontant.DefaultText = "";
             this.txtMontant.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.txtMontant.ForeColor = System.Drawing.Color.White;
             this.txtMontant.HideSelection = true;
             this.txtMontant.IconLeft = null;
             this.txtMontant.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -545,7 +549,7 @@
             this.txtMontant.OnHoverState = stateProperties15;
             stateProperties16.BorderColor = System.Drawing.Color.Silver;
             stateProperties16.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            stateProperties16.ForeColor = System.Drawing.Color.Empty;
+            stateProperties16.ForeColor = System.Drawing.Color.White;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtMontant.OnIdleState = stateProperties16;
             this.txtMontant.Padding = new System.Windows.Forms.Padding(3);
@@ -738,9 +742,9 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.78571F));
             this.tableLayoutPanel3.Controls.Add(this.bunifuLabel9, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.BtnChooseFiles, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.gridFiles, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.btnSave, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.btnCancel, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.gridFiles, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(517, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -858,73 +862,6 @@
             this.BtnChooseFiles.TextPadding = new System.Windows.Forms.Padding(0);
             this.BtnChooseFiles.UseDefaultRadiusAndThickness = true;
             this.BtnChooseFiles.Click += new System.EventHandler(this.BtnChooseFiles_Click);
-            // 
-            // gridFiles
-            // 
-            this.gridFiles.AllowCustomTheming = false;
-            this.gridFiles.AllowUserToAddRows = false;
-            this.gridFiles.AllowUserToResizeColumns = false;
-            this.gridFiles.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.gridFiles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridFiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridFiles.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gridFiles.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gridFiles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridFiles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gridFiles.ColumnHeadersHeight = 40;
-            this.tableLayoutPanel3.SetColumnSpan(this.gridFiles, 2);
-            this.gridFiles.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.gridFiles.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.gridFiles.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.gridFiles.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.gridFiles.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.gridFiles.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.gridFiles.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.gridFiles.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.gridFiles.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.gridFiles.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gridFiles.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.gridFiles.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.gridFiles.CurrentTheme.Name = null;
-            this.gridFiles.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gridFiles.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.gridFiles.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.gridFiles.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.gridFiles.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridFiles.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gridFiles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridFiles.EnableHeadersVisualStyles = false;
-            this.gridFiles.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.gridFiles.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.gridFiles.HeaderBgColor = System.Drawing.Color.Empty;
-            this.gridFiles.HeaderForeColor = System.Drawing.Color.White;
-            this.gridFiles.Location = new System.Drawing.Point(3, 43);
-            this.gridFiles.Name = "gridFiles";
-            this.gridFiles.RowHeadersVisible = false;
-            this.gridFiles.RowTemplate.Height = 40;
-            this.gridFiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridFiles.Size = new System.Drawing.Size(274, 226);
-            this.gridFiles.TabIndex = 3;
-            this.gridFiles.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            this.gridFiles.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.gridFiles_RowsRemoved);
-            this.gridFiles.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.gridFiles_UserDeletedRow);
-            this.gridFiles.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.gridFiles_UserDeletingRow);
             // 
             // btnSave
             // 
@@ -1106,6 +1043,68 @@
             this.btnCancel.UseDefaultRadiusAndThickness = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // gridFiles
+            // 
+            this.gridFiles.AllowCustomTheming = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.gridFiles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridFiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridFiles.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridFiles.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gridFiles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridFiles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.gridFiles.ColumnHeadersHeight = 40;
+            this.tableLayoutPanel3.SetColumnSpan(this.gridFiles, 2);
+            this.gridFiles.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.gridFiles.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.gridFiles.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.gridFiles.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.gridFiles.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.gridFiles.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.gridFiles.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.gridFiles.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.gridFiles.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.gridFiles.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.gridFiles.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.gridFiles.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.gridFiles.CurrentTheme.Name = null;
+            this.gridFiles.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.gridFiles.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.gridFiles.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.gridFiles.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.gridFiles.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridFiles.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gridFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridFiles.EnableHeadersVisualStyles = false;
+            this.gridFiles.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.gridFiles.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.gridFiles.HeaderBgColor = System.Drawing.Color.Empty;
+            this.gridFiles.HeaderForeColor = System.Drawing.Color.White;
+            this.gridFiles.Location = new System.Drawing.Point(3, 43);
+            this.gridFiles.Name = "gridFiles";
+            this.gridFiles.RowHeadersVisible = false;
+            this.gridFiles.RowTemplate.Height = 40;
+            this.gridFiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridFiles.Size = new System.Drawing.Size(274, 226);
+            this.gridFiles.TabIndex = 3;
+            this.gridFiles.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.gridFiles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridFiles_CellDoubleClick);
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -1120,6 +1119,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddEditProjet";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAddEditProjet";
             this.Load += new System.EventHandler(this.frmAddEditProjet_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -1155,9 +1155,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel9;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton BtnChooseFiles;
-        private Bunifu.UI.WinForms.BunifuDataGridView gridFiles;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSave;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCancel;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private Bunifu.UI.WinForms.BunifuDataGridView gridFiles;
     }
 }

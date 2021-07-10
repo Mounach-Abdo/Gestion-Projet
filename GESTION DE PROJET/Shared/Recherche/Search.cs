@@ -35,9 +35,10 @@ namespace GESTION_DE_PROJET.Shared.Recherche
                 }
 
                 if ( CheckNom.Checked )
-                    where += " AND " + CheckNom.Tag + "='" + textNom.Text + "'";
+                    where += " AND " + CheckNom.Tag + " LIKE '%" + textNom.Text + "%'";
                 if ( CheckOrganisme.Checked )
-                    where += " AND " + CheckOrganisme.Tag + " = '" + textOrganismeID.Text + "'";
+                    where += " AND " + CheckOrganisme.Tag + " LIKE '%" + textOrganismeID.Text + "%'";
+
                 var data = Database.GetdDataFromDatabase(sql + where + orderBy);
 
                 gridResults.DataSource = data;
@@ -47,6 +48,34 @@ namespace GESTION_DE_PROJET.Shared.Recherche
             {
 
             }
+        }
+
+        private void btnFermer_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void checkCode_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            if ( !checkCode.Checked )
+                textCode.Text = "";
+        }
+
+        private void textCode_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckNom_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            if ( !CheckNom.Checked )
+                textNom.Text = "";
+        }
+
+        private void CheckOrganisme_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            if ( !CheckOrganisme.Checked )
+                textOrganismeID.Text = "";
         }
     }
 }

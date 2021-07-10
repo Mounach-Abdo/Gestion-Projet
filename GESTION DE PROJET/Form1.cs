@@ -1,4 +1,5 @@
 ﻿using GESTION_DE_PROJET.Shared;
+using GESTION_DE_PROJET.Views.Manage_Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -85,17 +86,17 @@ namespace GESTION_DE_PROJET
                 login.Focus();
                 return;
             }
-            var roleInputed = login.Text.Substring(login.Text.IndexOf("@"), login.Text.LastIndexOf(".") - login.Text.IndexOf("@"));
+            //var roleInputed = login.Text.Substring(login.Text.IndexOf("@"), login.Text.LastIndexOf(".") - login.Text.IndexOf("@"));
 
-            var sql = "Select nomrole roleEmployes where nomrole like '" + roleInputed + "'";
-            var result = Database.GetOneRow(sql);
-            if(result == "")
-            {
-                MessageBox.Show("Le nom de domaine est invalide(Role) ", "erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error
-                   );
-                login.Focus();
-                return;
-            }
+            //var sql = "Select nomrole roleEmployes where nomrole like '" + roleInputed + "'";
+            //var result = Database.GetOneRow(sql);
+            //if(result == "")
+            //{
+            //    MessageBox.Show("Le nom de domaine est invalide(Role) ", "erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error
+            //       );
+            //    login.Focus();
+            //    return;
+            //}
             if (string.IsNullOrEmpty(password.Text))
             {
                 MessageBox.Show("Veux devez un mot de passe", "erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error
@@ -106,27 +107,30 @@ namespace GESTION_DE_PROJET
 
             }
 
-             sql = "Select * from utilisateur where Mail='" + login.Text + "' and password='" + password.Text + "'";
+             var sql = "Select * from utilisateur where Mail='" + login.Text + "' and password='" + password.Text + "'";
             var user = Database.GetdDataFromDatabase(sql);
 
             if (user != null && user.Rows.Count > 0)
             {
-                MessageBox.Show("Vous etes Connecte \r\n Bienvenue", "Bienvenue", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                var role = login.Text.Substring(login.Text.IndexOf("@"), login.Text.LastIndexOf(".") - login.Text.IndexOf("@"));
+                MessageBox.Show("Vous etes connécté \r\n Bienvenue", "Bienvenue", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var role = login.Text.Substring(login.Text.IndexOf("@")+1, login.Text.LastIndexOf(".") - login.Text.IndexOf("@")-1);
                 App.ConnectedUserId = user.Rows[0]["matricule"] + "";
+                App.RoleUSer = role;
                 if (role.ToLower() == "Secretariat".ToLower() || role.ToLower() == "Direction".ToLower())
                 {
-                    App.RoleUSer = role;
+                  
                     SecretariatDirectionProjectManager frm = new SecretariatDirectionProjectManager();
-                    frm.ShowDialog();
                     this.Close();
+                    this.Dispose();
+                    frm.ShowDialog();
 
                 }
                 else if(role.ToLower() == "Admin".ToLower())
                 {
-                    Admin admin = new Admin();
-                    admin.ShowDialog();
+                    AdminUserManagerForm admin = new AdminUserManagerForm();
                     this.Close();
+                    this.Dispose();
+                    admin.ShowDialog();
                 }
             }
             else

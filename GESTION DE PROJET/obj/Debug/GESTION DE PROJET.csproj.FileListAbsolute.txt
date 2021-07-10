@@ -90,3 +90,5 @@ D:\ADBO\Gestion-Projet\GESTION DE PROJET\obj\Debug\GESTION DE PROJET.csproj.Core
 D:\ADBO\Gestion-Projet\GESTION DE PROJET\obj\Debug\GESTION DE PROJET.csproj.CopyComplete
 D:\ADBO\Gestion-Projet\GESTION DE PROJET\obj\Debug\GESTION DE PROJET.exe
 D:\ADBO\Gestion-Projet\GESTION DE PROJET\obj\Debug\GESTION DE PROJET.pdb
+D:\ADBO\Gestion-Projet\GESTION DE PROJET\obj\Debug\GESTION_DE_PROJET.Views.Manage_Users.AdminUserManagerForm.resources
+D:\ADBO\Gestion-Projet\GESTION DE PROJET\obj\Debug\GESTION_DE_PROJET.Views.Manage_Users.frmAddEditUser.resources

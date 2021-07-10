@@ -13,6 +13,11 @@ namespace GESTION_DE_PROJET.Views.Manage_Users
 {
     public partial class frmAddEditUser : Form
     {
+        /// <summary>
+        /// tested
+        /// </summary>
+        /// <param name="action"></param>
+        /// <param name="code"></param>
         public frmAddEditUser(string action,string code)
         {
             InitializeComponent();
@@ -25,7 +30,7 @@ namespace GESTION_DE_PROJET.Views.Manage_Users
         {
             if(action== "add" )
             {
-                var sql = "insert into utilisateur VALUES('"+textMatrcile.Text+"','"+txtNom.Text+"','"+textPrenom.Text+"','"+textAdress.Text+"','"+textTelephone.Text+"','"+txtNomContact.Text+"','"+textEmail.Text+"','"+RoleEmploye.SelectedValue+"','"+textPassword.Text+"')";
+                var sql = "insert into utilisateur VALUES('"+txtNom.Text+"','"+textPrenom.Text+"','"+textAdress.Text+"','"+textTelephone.Text+"','"+txtNomContact.Text+"','"+textEmail.Text+"','"+RoleEmploye.SelectedValue+"','"+textPassword.Text+"')";
                 var x = Database.UpdateDatabase(sql);
                 if(x > 0 )
                 {
@@ -40,7 +45,7 @@ namespace GESTION_DE_PROJET.Views.Manage_Users
             }
             else
             {
-                var sql = "update utilisateur set nom='" + txtNom.Text + "',prenom='" + textPrenom.Text + "',address='" + textAdress.Text + "',phone='" + textTelephone.Text + "',nomContact='" + txtNomContact.Text + "',mail='" + textEmail.Text + "',idrole='" + RoleEmploye.SelectedValue + "',password='"+textPassword.Text+"' where matricule='"+textMatrcile.Text+"'";
+                var sql = "update utilisateur set nom='" + txtNom.Text + "',prenom='" + textPrenom.Text + "',adresse='" + textAdress.Text + "',phone='" + textTelephone.Text + "',nomContact='" + txtNomContact.Text + "',mail='" + textEmail.Text + "',idrole='" + RoleEmploye.SelectedValue + "',password='"+textPassword.Text+"' where matricule='"+textMatrcile.Text+"'";
 
                 var x = Database.UpdateDatabase(sql);
                 if ( x > 0 )
@@ -61,8 +66,14 @@ namespace GESTION_DE_PROJET.Views.Manage_Users
             this.Close();
         }
 
+        /// <summary>
+        /// tested
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmAddEditUser_Load(object sender, EventArgs e)
         {
+            App.FillCombo(ref RoleEmploye,"select * from roleEmployes", "id", "nomrole");
             if(action == "add" )
             {
 
@@ -73,6 +84,9 @@ namespace GESTION_DE_PROJET.Views.Manage_Users
                 GetUser();
             }
         }
+        /// <summary>
+        /// tested
+        /// </summary>
         void GetUser()
         {
             var sql = "Select * from utilisateur where matricule='" + code + "'";

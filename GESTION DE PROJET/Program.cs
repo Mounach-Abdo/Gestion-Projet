@@ -16,7 +16,7 @@ namespace GESTION_DE_PROJET
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SecretariatDirectionProjectManager());
+            new form1().ShowDialog();
         }
     }
 }

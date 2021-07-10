@@ -53,17 +53,11 @@ namespace GESTION_DE_PROJET
             this.SearchBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.ProjectPanel = new System.Windows.Forms.Panel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MainPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridProject)).BeginInit();
             this.panel1.SuspendLayout();
             this.ProjectPanel.SuspendLayout();
-            this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -120,7 +114,7 @@ namespace GESTION_DE_PROJET
             this.btnclose.CursorType = System.Windows.Forms.Cursors.Hand;
             this.btnclose.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.Color.White;
-            this.btnclose.Location = new System.Drawing.Point(832, 4);
+            this.btnclose.Location = new System.Drawing.Point(996, 3);
             this.btnclose.Name = "btnclose";
             this.btnclose.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnclose.Size = new System.Drawing.Size(12, 22);
@@ -138,9 +132,6 @@ namespace GESTION_DE_PROJET
             // 
             // MainPanel
             // 
-            this.MainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.MainPanel.BackgroundColor = System.Drawing.Color.Transparent;
             this.MainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainPanel.BackgroundImage")));
             this.MainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -149,10 +140,11 @@ namespace GESTION_DE_PROJET
             this.MainPanel.BorderThickness = 1;
             this.MainPanel.Controls.Add(this.tableLayoutPanel1);
             this.MainPanel.Controls.Add(this.ProjectPanel);
-            this.MainPanel.Location = new System.Drawing.Point(243, 4);
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.ShowBorders = true;
-            this.MainPanel.Size = new System.Drawing.Size(583, 477);
+            this.MainPanel.Size = new System.Drawing.Size(1011, 613);
             this.MainPanel.TabIndex = 32;
             // 
             // tableLayoutPanel1
@@ -165,6 +157,7 @@ namespace GESTION_DE_PROJET
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.tableLayoutPanel1.Controls.Add(this.bunifuLabel2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnclose, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnAdd, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.gridProject, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 2);
@@ -178,7 +171,7 @@ namespace GESTION_DE_PROJET
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 9F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(583, 477);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1011, 613);
             this.tableLayoutPanel1.TabIndex = 53;
             // 
             // bunifuLabel2
@@ -190,7 +183,7 @@ namespace GESTION_DE_PROJET
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel2.Location = new System.Drawing.Point(206, 10);
+            this.bunifuLabel2.Location = new System.Drawing.Point(420, 10);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(127, 20);
@@ -248,7 +241,7 @@ namespace GESTION_DE_PROJET
             this.btnAdd.IdleIconLeftImage = null;
             this.btnAdd.IdleIconRightImage = null;
             this.btnAdd.IndicateFocus = false;
-            this.btnAdd.Location = new System.Drawing.Point(505, 54);
+            this.btnAdd.Location = new System.Drawing.Point(933, 54);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAdd.OnDisabledState.BorderRadius = 15;
@@ -312,8 +305,6 @@ namespace GESTION_DE_PROJET
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridProject.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gridProject.ColumnHeadersHeight = 40;
-            this.gridProject.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
             this.tableLayoutPanel1.SetColumnSpan(this.gridProject, 5);
             this.gridProject.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.gridProject.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -352,7 +343,7 @@ namespace GESTION_DE_PROJET
             this.gridProject.RowHeadersVisible = false;
             this.gridProject.RowTemplate.Height = 40;
             this.gridProject.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridProject.Size = new System.Drawing.Size(577, 385);
+            this.gridProject.Size = new System.Drawing.Size(1005, 521);
             this.gridProject.TabIndex = 3;
             this.gridProject.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.gridProject.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProject_CellContentClick);
@@ -491,7 +482,7 @@ namespace GESTION_DE_PROJET
             this.btnDelete.IdleIconLeftImage = null;
             this.btnDelete.IdleIconRightImage = null;
             this.btnDelete.IndicateFocus = false;
-            this.btnDelete.Location = new System.Drawing.Point(405, 54);
+            this.btnDelete.Location = new System.Drawing.Point(833, 54);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDelete.OnDisabledState.BorderRadius = 15;
@@ -582,7 +573,7 @@ namespace GESTION_DE_PROJET
             this.SearchBtn.IdleIconLeftImage = null;
             this.SearchBtn.IdleIconRightImage = null;
             this.SearchBtn.IndicateFocus = false;
-            this.SearchBtn.Location = new System.Drawing.Point(308, 54);
+            this.SearchBtn.Location = new System.Drawing.Point(736, 54);
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.SearchBtn.OnDisabledState.BorderRadius = 15;
@@ -633,7 +624,7 @@ namespace GESTION_DE_PROJET
             this.ProjectPanel.Controls.Add(this.bunifuLabel1);
             this.ProjectPanel.Location = new System.Drawing.Point(2, 3);
             this.ProjectPanel.Name = "ProjectPanel";
-            this.ProjectPanel.Size = new System.Drawing.Size(578, 474);
+            this.ProjectPanel.Size = new System.Drawing.Size(1006, 610);
             this.ProjectPanel.TabIndex = 52;
             // 
             // bunifuLabel1
@@ -653,91 +644,13 @@ namespace GESTION_DE_PROJET
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuPanel1
-            // 
-            this.bunifuPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(177)))), ((int)(((byte)(136)))));
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BorderRadius = 3;
-            this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.bunifuLabel5);
-            this.bunifuPanel1.Controls.Add(this.bunifuLabel6);
-            this.bunifuPanel1.Controls.Add(this.bunifuLabel7);
-            this.bunifuPanel1.Location = new System.Drawing.Point(-1, -1);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(238, 497);
-            this.bunifuPanel1.TabIndex = 25;
-            this.bunifuPanel1.Click += new System.EventHandler(this.bunifuPanel1_Click);
-            // 
-            // bunifuLabel5
-            // 
-            this.bunifuLabel5.AllowParentOverrides = false;
-            this.bunifuLabel5.AutoEllipsis = false;
-            this.bunifuLabel5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel5.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel5.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel5.Location = new System.Drawing.Point(13, 251);
-            this.bunifuLabel5.Name = "bunifuLabel5";
-            this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel5.Size = new System.Drawing.Size(104, 25);
-            this.bunifuLabel5.TabIndex = 14;
-            this.bunifuLabel5.Text = "Les Clients";
-            this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel6
-            // 
-            this.bunifuLabel6.AllowParentOverrides = false;
-            this.bunifuLabel6.AutoEllipsis = false;
-            this.bunifuLabel6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel6.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel6.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel6.Location = new System.Drawing.Point(13, 197);
-            this.bunifuLabel6.Name = "bunifuLabel6";
-            this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel6.Size = new System.Drawing.Size(143, 25);
-            this.bunifuLabel6.TabIndex = 13;
-            this.bunifuLabel6.Text = "Les Utilisateurs";
-            this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel7
-            // 
-            this.bunifuLabel7.AllowParentOverrides = false;
-            this.bunifuLabel7.AutoEllipsis = false;
-            this.bunifuLabel7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel7.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel7.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel7.Location = new System.Drawing.Point(13, 153);
-            this.bunifuLabel7.Name = "bunifuLabel7";
-            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel7.Size = new System.Drawing.Size(191, 25);
-            this.bunifuLabel7.TabIndex = 12;
-            this.bunifuLabel7.Text = "Gestion Des Projets";
-            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            // 
             // SecretariatDirectionProjectManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(852, 493);
+            this.ClientSize = new System.Drawing.Size(1011, 613);
             this.Controls.Add(this.MainPanel);
-            this.Controls.Add(this.btnclose);
-            this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SecretariatDirectionProjectManager";
             this.Text = "Project";
@@ -750,23 +663,16 @@ namespace GESTION_DE_PROJET
             this.panel1.PerformLayout();
             this.ProjectPanel.ResumeLayout(false);
             this.ProjectPanel.PerformLayout();
-            this.bunifuPanel1.ResumeLayout(false);
-            this.bunifuPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
         private Bunifu.UI.WinForms.BunifuLabel btnclose;
         private System.Windows.Forms.ImageList imageList1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
         private Bunifu.UI.WinForms.BunifuPanel MainPanel;
         private System.Windows.Forms.Panel ProjectPanel;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
@@ -779,6 +685,5 @@ namespace GESTION_DE_PROJET
         private Bunifu.UI.WinForms.BunifuCheckBox bunifuCheckBox1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDelete;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
     }
 }

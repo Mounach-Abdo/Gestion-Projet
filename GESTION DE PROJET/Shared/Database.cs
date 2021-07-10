@@ -10,10 +10,10 @@ namespace GESTION_DE_PROJET.Shared
 {
     class Database
     {
-        public static  SqlConnection cnx = new SqlConnection();
-        public SqlCommand cmd = new SqlCommand();
+        public static  SqlConnection cnx;
+        public SqlCommand cmd;
         //public SqlDataReader dr = new SqlDataReader();
-        public SqlDataAdapter dt = new SqlDataAdapter();
+        public SqlDataAdapter dt;
 
         public static  void connecter()
         {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,10 @@ namespace GESTION_DE_PROJET.Views.Managa_Project.Forms
         public string status;
         public string code;
 
+        /// <summary>
+        /// tested
+        /// </summary>
+        /// <returns></returns>
         public bool verifierChamps()
         {
             if (string.IsNullOrEmpty(txtNom.Text))
@@ -84,6 +89,11 @@ namespace GESTION_DE_PROJET.Views.Managa_Project.Forms
             }
         }
 
+        /// <summary>
+        /// tested
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmAddEditProjet_Load(object sender, EventArgs e)
         {
             try
@@ -95,17 +105,22 @@ namespace GESTION_DE_PROJET.Views.Managa_Project.Forms
                     BtnChooseFiles.Enabled = false;
                     gridFiles.Enabled = false;
                 }
-                App.FillCombo(ref chefProject, "Select Code, Nom+' '+Prenom as nom from Utilisateur", "Code", "nom");
+                App.FillCombo(ref chefProject, "Select matricule, Nom+' '+Prenom as nom from Utilisateur where idrole in (select id from roleEmployes where nomrole like 'chef de projet')", "matricule", "nom");
                 App.FillCombo(ref OrganismeClient, "Select Code, Nom from Organisme", "Code", "Nom");
                 if ( status == "add" )
                 {
                     btnSave.Text = "Ajouter";
+                    chefProject.SelectedValue = "";
+                    OrganismeClient.SelectedValue = "";
                 }
                 else
                 {
                     btnSave.Text = "Modifier";
                     fillFields(code);
                 }
+                var sql = "Select chemin as 'les Fichiers' from documentTechnique where idprojet='" + code + "'";
+                var documentOfProject = Database.GetdDataFromDatabase(sql);
+                gridFiles.DataSource = documentOfProject;
             }
             catch ( Exception ex )
             {
@@ -114,6 +129,10 @@ namespace GESTION_DE_PROJET.Views.Managa_Project.Forms
 
         }
 
+        /// <summary>
+        /// tested
+        /// </summary>
+        /// <param name="code"></param>
         private void fillFields(string code)
         {
             try
@@ -133,11 +152,10 @@ namespace GESTION_DE_PROJET.Views.Managa_Project.Forms
 
                     dateDebut.Value = debut;
                     dateFin.Value = fin;
-                    sql = "Select id,chemin from documentTechnique where idprojet='" + code + "'";
-                    var documentOfProject = Database.GetdDataFromDatabase(sql);
-                    gridFiles.DataSource = documentOfProject;
-                    gridFiles.Columns[0].Visible = false;
+                   
+                   txtMontant.Text = row["montant"] + "";
                 }
+
             }
             catch ( Exception ex )
             {
@@ -151,6 +169,12 @@ namespace GESTION_DE_PROJET.Views.Managa_Project.Forms
         }
 
         private List<string> deletedFilesIds = new List<string>();
+
+        /// <summary>
+        /// tested
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSave_Click(object sender, EventArgs e)
         {
             if ( status == "add" )
@@ -166,13 +190,13 @@ namespace GESTION_DE_PROJET.Views.Managa_Project.Forms
                 else
                     insertedCode++;
                 textCode.Text = insertedCode + "";
-                var sql = "INSERT INTO projet(Code, nom, description, datedebut, datefin, clientOrganismeID";
+                var sql = "INSERT INTO projet(nom, description, datedebut, datefin, clientOrganismeID";
                 if ( App.RoleUSer == App.DirectionRole )
                 {
                     sql += ",montant,chefprojet";
                 }
 
-                sql += ") VALUES ('" + textCode.Text + "','" + txtNom.Text + "','" + txtDesc.Text + "','" +
+                sql += ") VALUES ('" + txtNom.Text + "','" + txtDesc.Text + "','" +
                        dateDebut.Value.ToString(App.formatDateSql) + "','" + dateFin.Value.ToString(App.formatDateSql) +
                        "','" + OrganismeClient.SelectedValue + "'";
                 if ( App.RoleUSer == App.DirectionRole )
@@ -193,7 +217,7 @@ namespace GESTION_DE_PROJET.Views.Managa_Project.Forms
                             sql = "INSERT INTO documentTechnique(chemin,idprojet) VALUES";
                             foreach ( DataGridViewRow row in gridFiles.Rows )
                             {
-                                sql += "('" + row.Cells[1].Value + "','" + textCode.Text + "')";
+                                sql += "('" + row.Cells[0].Value + "','" + textCode.Text + "')";
                             }
                             //insert files in database;
                             Database.UpdateDatabase(sql);
@@ -233,9 +257,12 @@ namespace GESTION_DE_PROJET.Views.Managa_Project.Forms
                 {
                     if ( App.RoleUSer == App.DirectionRole )
                     {
+                        sql = "Delete from documentTechnique where idprojet='" + textCode.Text + "'";
+                        x = Database.UpdateDatabase(sql);
                         foreach ( DataGridViewRow row in gridFiles.Rows )
                         {
-                            var filesSQl = "update documentTechnique set chemin='" + row.Cells[1].Value + "' where id='" + row.Cells[0].Value + "'";
+                            
+                            var filesSQl = "insert into documentTechnique(chemin, idprojet)VALUES('"+row.Cells[0].Value+"','"+textCode.Text+"')" ;
                             Database.UpdateDatabase(filesSQl);
                         }
 
@@ -250,7 +277,7 @@ namespace GESTION_DE_PROJET.Views.Managa_Project.Forms
                     }
 
                     MessageBox.Show("les donnes sont bien modifiées", "enregistrement des données",
-                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
                 else
@@ -267,6 +294,11 @@ namespace GESTION_DE_PROJET.Views.Managa_Project.Forms
 
         }
 
+        /// <summary>
+        /// tested
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnChooseFiles_Click(object sender, EventArgs e)
         {
             var dialog = openFileDialog1.ShowDialog();
@@ -275,16 +307,17 @@ namespace GESTION_DE_PROJET.Views.Managa_Project.Forms
                 if ( openFileDialog1.FileNames?.Length > 0 )
                 {
                     var files = openFileDialog1.FileNames;
+                    
                     foreach ( var file in files )
                     {
                         if ( File.Exists(file) )
-                            gridFiles.Rows.Add(DBNull.Value, file);
+                            (gridFiles.DataSource as DataTable).Rows.Add(file);
                     }
                 }
                 else
                 {
                     if ( File.Exists(openFileDialog1.FileName) )
-                        gridFiles.Rows.Add(DBNull.Value, openFileDialog1.FileName);
+                        (gridFiles.DataSource as DataTable).Rows.Add(openFileDialog1.FileName);
                 }
             }
         }
@@ -294,6 +327,11 @@ namespace GESTION_DE_PROJET.Views.Managa_Project.Forms
 
         }
 
+        /// <summary>
+        /// tested
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gridFiles_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
             var dialog = MessageBox.Show("Voulez Vous Vraiment Supprimer ce fichier?", "Confirmation", MessageBoxButtons.YesNo,
@@ -302,11 +340,31 @@ namespace GESTION_DE_PROJET.Views.Managa_Project.Forms
                 e.Cancel = true;
         }
 
+        /// <summary>
+        /// tested
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gridFiles_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
         {
             if ( deletedFilesIds is null )
                 deletedFilesIds = new List<string>();
             deletedFilesIds.Add(e.Row.Cells[0].Value + "");
+        }
+
+        /// <summary>
+        /// tsted
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void gridFiles_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(gridFiles.CurrentCell != null )
+            {
+                var file = gridFiles.CurrentCell.Value + "";
+                if ( File.Exists(file) )
+                    Process.Start(file);
+            }
         }
     }
 }
